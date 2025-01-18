@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favorite Movies List</title>
+  <script defer src="script.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+</head>
+<body class="bg-gray-100 font-sans">
+  <div class="container mx-auto p-6">
+    <h1 class="text-4xl font-bold text-center mb-6">My Favorite Movies</h1>
+    
+    <!-- Search Bar -->
+    <div id="moviesList" class="mb-6">
+      <div class="flex items-center mb-6">
+        <input id="searchBar" type="text" placeholder="Enter movie title..." 
+               class="border p-2 rounded flex-grow mr-2">
+        <button id="searchButton" 
+                class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+          Search
+        </button>
+      </div>
+      <!-- movies list -->
+      <div id="moviesListDisplay" class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-6 justify-center">
+        <!-- found movie cards will go here -->
+      </div>
+    </div>
+
+    <!-- favorite movies section -->
+    <div id="favoritesList" class="mb-6">
+      <h2 class="text-3xl font-bold text-center mb-6">Favorites</h2>
+      <div id="favoritesListDisplay" class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-6 justify-center">
+        <!-- favorite movie cards will go here -->
+      </div>
+    </div>
+  </div>
+</body>
+</html>
