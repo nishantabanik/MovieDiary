@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Favorite Movies List</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body class="bg-gray-800 text-white font-sans">
+  <div class="container mx-auto p-6">
+    <h1 class="text-4xl font-bold text-center mb-6">My Movie Journal</h1>
+    
+    <!-- Search Bar -->
+    <div id="moviesList" class="mb-6">
+      <div class="flex items-center mb-6 gap-2">
+        <input id="searchBar" type="text" placeholder="Enter movie title..." 
+               class="flex-grow p-2 rounded-md bg-gray-700 text-white placeholder-gray-400">
+        <button id="searchButton" 
+                class="bg-blue-500 hover:bg-blue-700 p-2 rounded-md font-bold">
+          Search
+        </button>
+      </div>
+      <div id="moviesListDisplay" class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-6 justify-center"></div>
+    </div>
+
+    <!-- Favorites Section -->
+    <div id="favoritesList" class="mb-6">
+      <h2 class="text-3xl font-bold text-center mb-6">Favorites</h2>
+      <div class="flex items-center mb-6 gap-2"><input type="text" id="tagsSearchBar" placeholder="Search by tags" class="flex-grow p-2 rounded-md bg-gray-700 text-white placeholder-gray-400">
+<button id="tagsSearchButton" class="bg-blue-500 hover:bg-blue-700 p-2 rounded-md font-bold">Search</button></div>
+      <div id="favoritesListDisplay" class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-6 justify-center">
+        <!-- Favorite movie cards will appear here -->
+      </div>
+    </div>
+  </div>
+<script src="journal.js"></script>  
+</body>
+</html>
