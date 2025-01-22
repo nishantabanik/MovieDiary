@@ -3,10 +3,193 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Diary - Home</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Silver Screen Devs</title>
   </head>
-  <body>
-    <script src="script.js"></script>
+  <body class="bg-gray-800 text-white">
+    <!-- Navbar -->
+    <header class="bg-gray-900 bg-opacity-80 text-white md:sticky top-0 z-10">
+      <nav class="md:flex justify-between p-4">
+        <img src="logo.png" alt="MovieDiary" width="100px" height="100px" />
+
+        <ul class="flex gap-4 m-5">
+          <li
+            class="bg-transparent border-2 border-[#f99339] hover:bg-[#f99339] p-2"
+          >
+            <a href="index.html" class="">Home</a>
+          </li>
+          <li
+            class="bg-transparent border-2 border-[#f99339] hover:bg-[#f99339] p-2"
+          >
+            <a href="journal.html" class="">Journal</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Slider Section -->
+    <section
+      id="slider"
+      class="relative bg-cover bg-center text-center"
+      style="background-image: url('slider-1.jpg')"
+    >
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+      <!-- Content Wrapper -->
+      <div
+        class="mx-auto relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center text-white"
+      >
+        <!-- Left Image Section -->
+        <div class="flex justify-center md:justify-end">
+          <div class="w-full max-w-xs">
+            <img
+              src="1.png"
+              alt="About Section iPhone"
+              class="w-full h-auto md:animate-bounce"
+            />
+          </div>
+        </div>
+
+        <!-- Right Content Section -->
+        <div class="text-center md:text-left">
+          <!-- Animated Heading -->
+          <h2 class="text-4xl font-bold mb-4 animate-pulse">
+            Welcome to <span class="text-[#f99339]">MovieDiary</span>
+          </h2>
+          <!-- Animated Paragraph -->
+          <p class="text-lg mb-8">
+            A powerful app to transform the way you manage your tasks and goals.
+          </p>
+          <!-- Button -->
+          <button
+            class="font-bold bg-[#f99339] text-white px-6 py-2 shadow-md hover:bg-transparent border-2 border-[#f99339] animate-pulse"
+          >
+            GET STARTED
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Search Section -->
+
+    <section
+      id="search"
+      class="py-16 flex flex-wrap justify-center text-center mx-auto bg-white"
+    >
+      <!-- Left Section with Text -->
+      <div class="lg:w-7/12 w-full">
+        <div class="section_title mb-6">
+          <h2 class="text-3xl font-bold text-[#f99339] mb-4">Find Here !</h2>
+          <img
+            src="arrow.png"
+            class="inline-block p-2 animate-spin"
+            alt="arrow"
+          />
+        </div>
+        <div
+          class="flex items-center justify-center shadow-lg max-w-lg mx-auto"
+        >
+          <input
+            id="search-bar"
+            type="text"
+            placeholder="SEARCH FOR MOVIES..."
+            class="flex-grow p-2 text-white bg-gray-800 placeholder-gray-400 outline-none"
+          />
+          <button
+            id="search-btn"
+            class="bg-[#f99339] shadow-md text-white px-6 py-2 font-bold hover:bg-white hover:text-gray-800"
+          >
+            GO
+          </button>
+        </div>
+      </div>
+
+      <!-- Right Section with Image -->
+      <div
+        class="lg:w-5/12 md:w-full sm:w-full w-full text-center animate__animated animate__slideInLeft order-1 lg:order-2 mt-8 lg:mt-0"
+      >
+        <img src="2.png" alt="Search Here" class="mx-auto" />
+      </div>
+    </section>
+
+    <!-- Movies Section -->
+    <section
+      id="movies-container"
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4"
+    ></section>
+
+    <footer
+      id="footer"
+      class="bg-cover bg-center py-12 relative"
+      style="background-image: url('3.jpg')"
+    >
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-gray-900 bg-opacity-50"></div>
+      <!-- Footer Logo -->
+      <div class="mx-auto relative z-10 text-center text-white">
+        <div class="mb-9">
+          <img
+            src="logo.png"
+            alt="Footer Logo"
+            class="mx-auto"
+            width="150px"
+            height="150px"
+          />
+        </div>
+        <!-- Copyright Text -->
+        <div class="text-gray-200 mb-6">
+          <p>
+            Copyright © 2025
+            <a
+              href="https://www.solwininfotech.com/"
+              target="_blank"
+              class="text-[#f99339]"
+              >Silver Screen Devs</a
+            >
+            - All rights reserved.
+          </p>
+        </div>
+        <!-- Social Media Links -->
+        <div class="flex justify-center space-x-4">
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            class="text-gray-200 hover:text-[#f99339]"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a
+            href="https://twitter.com/"
+            target="_blank"
+            class="text-gray-200 hover:text-[#f99339]"
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/company/"
+            target="_blank"
+            class="text-gray-200 hover:text-[#f99339]"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a
+            href="https://www.pinterest.com/"
+            target="_blank"
+            class="text-gray-200 hover:text-[#f99339]"
+          >
+            <i class="fab fa-pinterest"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            class="text-gray-200 hover:text-[#f99339]"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script type="module" src="main.js"></script>
   </body>
 </html>
