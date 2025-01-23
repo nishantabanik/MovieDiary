@@ -63,7 +63,7 @@ const renderMovies = (movies) => {
     const addToFavoritesBtn = document.createElement("button");
     addToFavoritesBtn.textContent = "Add to Favorites";
     addToFavoritesBtn.className =
-      "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4";
+      "bg-[#f99339] hover:bg-white hover:text-[#f99339] text-white font-semibold py-2 px-4 mt-4";
     addToFavoritesBtn.addEventListener("click", () => {
       addToFavorites(movie);
     });
