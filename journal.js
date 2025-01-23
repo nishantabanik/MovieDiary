@@ -68,7 +68,9 @@ function displayFavorites() {
     return;
   }
 
-  favorites.forEach((movie) => {
+  const reversedFavorites = [...favorites].reverse();
+
+  reversedFavorites.forEach((movie) => {
     const favoriteCard = `
             <div class="bg-gray-900 text-white rounded-lg shadow-md overflow-hidden p-4 relative">
                 <img src="${movie.poster_path ? `https://image.tmdb.org/t/p/w500/${movie.poster_path}` : 'placeholder.jpg'}" 
@@ -162,27 +164,6 @@ function saveFavoritesToLocalStorage() {
 function loadFavoritesFromLocalStorage() {
   const storedFavorites = localStorage.getItem("favorites");
   return storedFavorites ? JSON.parse(storedFavorites) : [];
-}
-
-function sortFavorites() {
-  favorites.sort((a, b) => {
-    const dateA = a.watchedDate ? new Date(a.watchedDate) : null;
-    const dateB = b.watchedDate ? new Date(b.watchedDate) : null;
-
-    if (!dateA && !dateB) return 0;
-    if (!dateA) return 1;
-    if (!dateB) return -1;
-
-    const today = new Date().setHours(0, 0, 0, 0);
-    if (dateA > today && dateB > today) return dateA - dateB;
-
-    if (dateA.getTime() === today) return -1;
-    if (dateB.getTime() === today) return 1;
-
-    if (dateA < today && dateB < today) return dateB - dateA;
-
-    return 0;
-  });
 }
 
 document.getElementById("searchButton").addEventListener("click", async () => {
