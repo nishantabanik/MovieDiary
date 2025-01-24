@@ -102,7 +102,7 @@ function displayFavorites() {
                             class="rounded px-2 py-1 mt-2 text-gray-700 w-2/3"
                             onkeydown="if(event.key === 'Enter') addTag(${movie.id}, this.value)">
                         <button 
-                            class="bg-blue-500 text-white px-2 py-1 w-2/3 rounded" 
+                            class="bg-transparent border-2 border-[#f99339] hover:bg-[#f99339] p-2 w-2/3" 
                             onclick="addTag(${movie.id}, document.getElementById('tagInput-${movie.id}').value)">
                             Add Tag
                         </button>
