@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Favorite Movies List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+  </head>
+  <body class="bg-gray-800 text-white font-sans">
+    <!-- Navbar -->
+    <header class="bg-gray-900 bg-opacity-80 text-white md:sticky top-0 z-10">
+      <nav class="md:flex justify-between p-4">
+        <img
+          src="./img/logo.png"
+          alt="MovieDiary"
+          width="100px"
+          height="100px"
+        />
+
+        <ul class="flex gap-4 m-5">
+          <li
+            class="bg-transparent border-2 border-[#f99339] hover:bg-[#f99339] p-2"
+          >
+            <a href="index.html" class="">Home</a>
+          </li>
+          <li
+            class="bg-transparent border-2 border-[#f99339] hover:bg-[#f99339] p-2"
+          >
+            <a href="journal.html" class="">Journal</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container mx-auto p-6">
+      <h1 class="text-4xl font-bold text-center mb-6">My Movie Journal</h1>
+
+      <!-- Favorites Section -->
+      <div id="favoritesList" class="mb-6">
+        <div class="flex items-center mb-6 gap-2">
+          <input
+            type="text"
+            id="tag-search-bar"
+            placeholder="Search by tags"
+            class="flex-grow p-2 rounded-md bg-gray-700 text-white placeholder-gray-400"
+          />
+          <button
+            id="tag-search-btn"
+            class="bg-transparent border-2 border-[#f99339] hover:bg-[#f99339] p-2"
+          >
+            Search
+          </button>
+        </div>
+        <div
+          id="journal-movies-container"
+          class="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-6 justify-center"
+        >
+          <!-- Favorite movie cards will appear here -->
+        </div>
+      </div>
+    </div>
+    <footer
+      id="footer"
+      class="bg-cover bg-center py-12 relative"
+      style="background-image: url('./img/3.jpg')"
+    >
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-gray-900 bg-opacity-50"></div>
+      <!-- Footer Logo -->
+      <div class="mx-auto relative z-10 text-center text-white">
+        <div class="mb-9">
+          <img
+            src="./img/logo.png"
+            alt="Footer Logo"
+            class="mx-auto"
+            width="150px"
+            height="150px"
+          />
+        </div>
+        <!-- Copyright Text -->
+        <div class="text-gray-200 mb-6">
+          <p>
+            Copyright © 2025
+            <a href="#" target="_blank" class="text-[#f99339]"
+              >Silver Screen Devs</a
+            >
+            - All rights reserved.
+          </p>
+        </div>
+        <!-- Social Media Links -->
+        <div class="flex justify-center space-x-4">
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            class="text-gray-200 hover:text-[#f99339]"
+          >
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a
+            href="https://twitter.com/"
+            target="_blank"
+            class="text-gray-200 hover:text-[#f99339]"
+          >
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/company/"
+            target="_blank"
+            class="text-gray-200 hover:text-[#f99339]"
+          >
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a
+            href="https://www.pinterest.com/"
+            target="_blank"
+            class="text-gray-200 hover:text-[#f99339]"
+          >
+            <i class="fab fa-pinterest"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            class="text-gray-200 hover:text-[#f99339]"
+          >
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script src="./js/journal.js"></script>
+  </body>
+</html>
